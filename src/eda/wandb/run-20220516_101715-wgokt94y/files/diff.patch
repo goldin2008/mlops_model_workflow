@@ -1,0 +1,130 @@
+diff --git a/main.py b/main.py
+index 9abc5bb..34d9788 100644
+--- a/main.py
++++ b/main.py
+@@ -51,6 +51,18 @@ def go(config: DictConfig):
+         if "basic_cleaning" in active_steps:
+             ##################
+             # Implement here #
++            _ = mlflow.run(
++                 os.path.join(hydra.utils.get_original_cwd(), "src", "basic_cleaning"),
++                 "main",
++                 parameters={
++                     "input_artifact": "sample.csv:latest",
++                     "output_artifact": "clean_sample.csv",
++                     "output_type": "clean_sample",
++                     "output_description": "Data with outliers and null values removed",
++                     "min_price": config['etl']['min_price'],
++                     "max_price": config['etl']['max_price']
++                 },
++             )
+             ##################
+             pass
+ 
+diff --git a/src/data_check/test_data.py b/src/data_check/test_data.py
+index 6ed3ec6..8c20033 100644
+--- a/src/data_check/test_data.py
++++ b/src/data_check/test_data.py
+@@ -62,4 +62,10 @@ def test_similar_neigh_distrib(data: pd.DataFrame, ref_data: pd.DataFrame, kl_th
+ 
+ ########################################################
+ # Implement here test_row_count and test_price_range   #
++def test_row_count(data):
++    assert 15000 < data.shape[0] < 1000000
++
++
++def test_price_range(data, min_price, max_price):
++    data['price'].between(min_price, max_price)
+ ########################################################
+diff --git a/src/eda/EDA.ipynb b/src/eda/EDA.ipynb
+index 2cb29da..c8956bb 100644
+--- a/src/eda/EDA.ipynb
++++ b/src/eda/EDA.ipynb
+@@ -11,7 +11,7 @@
+      "output_type": "stream",
+      "text": [
+       "\u001b[34m\u001b[1mwandb\u001b[0m: Currently logged in as: \u001b[33mgoldin2008\u001b[0m (use `wandb login --relogin` to force relogin)\n",
+-      "\u001b[34m\u001b[1mwandb\u001b[0m: wandb version 0.12.9 is available!  To upgrade, please run:\n",
++      "\u001b[34m\u001b[1mwandb\u001b[0m: wandb version 0.12.16 is available!  To upgrade, please run:\n",
+       "\u001b[34m\u001b[1mwandb\u001b[0m:  $ pip install wandb --upgrade\n"
+      ]
+     },
+@@ -20,10 +20,10 @@
+       "text/html": [
+        "\n",
+        "                Tracking run with wandb version 0.10.31<br/>\n",
+-       "                Syncing run <strong style=\"color:#cdcd00\">bright-mountain-6</strong> to <a href=\"https://wandb.ai\" target=\"_blank\">Weights & Biases</a> <a href=\"https://docs.wandb.com/integrations/jupyter.html\" target=\"_blank\">(Documentation)</a>.<br/>\n",
++       "                Syncing run <strong style=\"color:#cdcd00\">spring-bush-8</strong> to <a href=\"https://wandb.ai\" target=\"_blank\">Weights & Biases</a> <a href=\"https://docs.wandb.com/integrations/jupyter.html\" target=\"_blank\">(Documentation)</a>.<br/>\n",
+        "                Project page: <a href=\"https://wandb.ai/goldin2008/nyc_airbnb\" target=\"_blank\">https://wandb.ai/goldin2008/nyc_airbnb</a><br/>\n",
+-       "                Run page: <a href=\"https://wandb.ai/goldin2008/nyc_airbnb/runs/k0qf7903\" target=\"_blank\">https://wandb.ai/goldin2008/nyc_airbnb/runs/k0qf7903</a><br/>\n",
+-       "                Run data is saved locally in <code>/Users/leiyu/Projects/mlops_model_workflow/src/eda/wandb/run-20211225_214125-k0qf7903</code><br/><br/>\n",
++       "                Run page: <a href=\"https://wandb.ai/goldin2008/nyc_airbnb/runs/1rbemn94\" target=\"_blank\">https://wandb.ai/goldin2008/nyc_airbnb/runs/1rbemn94</a><br/>\n",
++       "                Run data is saved locally in <code>/Users/leiyu/Projects/mlops_model_workflow/src/eda/wandb/run-20220516_092653-1rbemn94</code><br/><br/>\n",
+        "            "
+       ],
+       "text/plain": [
+@@ -32,6 +32,64 @@
+      },
+      "metadata": {},
+      "output_type": "display_data"
++    },
++    {
++     "name": "stderr",
++     "output_type": "stream",
++     "text": [
++      "Exception in thread Thread-11:\n",
++      "Traceback (most recent call last):\n",
++      "  File \"/Users/leiyu/opt/anaconda3/envs/mlflow-8af91d08d13566aada991fdb38ca18c4510876b2/lib/python3.9/site-packages/wandb/apis/normalize.py\", line 24, in wrapper\n",
++      "    return func(*args, **kwargs)\n",
++      "  File \"/Users/leiyu/opt/anaconda3/envs/mlflow-8af91d08d13566aada991fdb38ca18c4510876b2/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py\", line 960, in upload_urls\n",
++      "    raise CommError(\n",
++      "wandb.errors.CommError: Run does not exist goldin2008/nyc_airbnb/1rbemn94.\n",
++      "\n",
++      "During handling of the above exception, another exception occurred:\n",
++      "\n",
++      "Traceback (most recent call last):\n",
++      "  File \"/Users/leiyu/opt/anaconda3/envs/mlflow-8af91d08d13566aada991fdb38ca18c4510876b2/lib/python3.9/threading.py\", line 973, in _bootstrap_inner\n",
++      "    self.run()\n",
++      "  File \"/Users/leiyu/opt/anaconda3/envs/mlflow-8af91d08d13566aada991fdb38ca18c4510876b2/lib/python3.9/site-packages/wandb/filesync/upload_job.py\", line 54, in run\n",
++      "Exception in thread Thread-12:\n",
++      "Traceback (most recent call last):\n",
++      "  File \"/Users/leiyu/opt/anaconda3/envs/mlflow-8af91d08d13566aada991fdb38ca18c4510876b2/lib/python3.9/site-packages/wandb/apis/normalize.py\", line 24, in wrapper\n",
++      "    success = self.push()\n",
++      "  File \"/Users/leiyu/opt/anaconda3/envs/mlflow-8af91d08d13566aada991fdb38ca18c4510876b2/lib/python3.9/site-packages/wandb/filesync/upload_job.py\", line 108, in push\n",
++      "    return func(*args, **kwargs)\n",
++      "  File \"/Users/leiyu/opt/anaconda3/envs/mlflow-8af91d08d13566aada991fdb38ca18c4510876b2/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py\", line 960, in upload_urls\n",
++      "    _, upload_headers, result = self._api.upload_urls(project, [self.save_name])\n",
++      "  File \"/Users/leiyu/opt/anaconda3/envs/mlflow-8af91d08d13566aada991fdb38ca18c4510876b2/lib/python3.9/site-packages/wandb/apis/normalize.py\", line 62, in wrapper\n",
++      "    raise CommError(\n",
++      "wandb.errors.CommError: Run does not exist goldin2008/nyc_airbnb/1rbemn94.\n",
++      "\n",
++      "During handling of the above exception, another exception occurred:\n",
++      "\n",
++      "Traceback (most recent call last):\n",
++      "  File \"/Users/leiyu/opt/anaconda3/envs/mlflow-8af91d08d13566aada991fdb38ca18c4510876b2/lib/python3.9/threading.py\", line 973, in _bootstrap_inner\n",
++      "    six.reraise(CommError, CommError(message, err), sys.exc_info()[2])\n",
++      "  File \"/Users/leiyu/opt/anaconda3/envs/mlflow-8af91d08d13566aada991fdb38ca18c4510876b2/lib/python3.9/site-packages/six.py\", line 718, in reraise\n",
++      "    self.run()\n",
++      "  File \"/Users/leiyu/opt/anaconda3/envs/mlflow-8af91d08d13566aada991fdb38ca18c4510876b2/lib/python3.9/site-packages/wandb/filesync/upload_job.py\", line 54, in run\n",
++      "    success = self.push()\n",
++      "  File \"/Users/leiyu/opt/anaconda3/envs/mlflow-8af91d08d13566aada991fdb38ca18c4510876b2/lib/python3.9/site-packages/wandb/filesync/upload_job.py\", line 108, in push\n",
++      "    _, upload_headers, result = self._api.upload_urls(project, [self.save_name])\n",
++      "  File \"/Users/leiyu/opt/anaconda3/envs/mlflow-8af91d08d13566aada991fdb38ca18c4510876b2/lib/python3.9/site-packages/wandb/apis/normalize.py\", line 62, in wrapper\n",
++      "    six.reraise(CommError, CommError(message, err), sys.exc_info()[2])\n",
++      "  File \"/Users/leiyu/opt/anaconda3/envs/mlflow-8af91d08d13566aada991fdb38ca18c4510876b2/lib/python3.9/site-packages/six.py\", line 718, in reraise\n",
++      "    raise value.with_traceback(tb)\n",
++      "  File \"/Users/leiyu/opt/anaconda3/envs/mlflow-8af91d08d13566aada991fdb38ca18c4510876b2/lib/python3.9/site-packages/wandb/apis/normalize.py\", line 24, in wrapper\n",
++      "    raise value.with_traceback(tb)\n",
++      "  File \"/Users/leiyu/opt/anaconda3/envs/mlflow-8af91d08d13566aada991fdb38ca18c4510876b2/lib/python3.9/site-packages/wandb/apis/normalize.py\", line 24, in wrapper\n",
++      "    return func(*args, **kwargs)\n",
++      "  File \"/Users/leiyu/opt/anaconda3/envs/mlflow-8af91d08d13566aada991fdb38ca18c4510876b2/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py\", line 960, in upload_urls\n",
++      "    return func(*args, **kwargs)\n",
++      "  File \"/Users/leiyu/opt/anaconda3/envs/mlflow-8af91d08d13566aada991fdb38ca18c4510876b2/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py\", line 960, in upload_urls\n",
++      "    raise CommError(\n",
++      "wandb.errors.CommError: Run does not exist goldin2008/nyc_airbnb/1rbemn94.\n",
++      "    raise CommError(\n",
++      "wandb.errors.CommError: Run does not exist goldin2008/nyc_airbnb/1rbemn94.\n"
++     ]
+     }
+    ],
+    "source": [

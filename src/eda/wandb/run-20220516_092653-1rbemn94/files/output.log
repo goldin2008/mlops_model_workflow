@@ -1,0 +1,48 @@
+Exception in thread Thread-11:
+Traceback (most recent call last):
+  File "/Users/leiyu/opt/anaconda3/envs/mlflow-8af91d08d13566aada991fdb38ca18c4510876b2/lib/python3.9/site-packages/wandb/apis/normalize.py", line 24, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/leiyu/opt/anaconda3/envs/mlflow-8af91d08d13566aada991fdb38ca18c4510876b2/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 960, in upload_urls
+    raise CommError(
+wandb.errors.CommError: Run does not exist goldin2008/nyc_airbnb/1rbemn94.
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "/Users/leiyu/opt/anaconda3/envs/mlflow-8af91d08d13566aada991fdb38ca18c4510876b2/lib/python3.9/threading.py", line 973, in _bootstrap_inner
+    self.run()
+  File "/Users/leiyu/opt/anaconda3/envs/mlflow-8af91d08d13566aada991fdb38ca18c4510876b2/lib/python3.9/site-packages/wandb/filesync/upload_job.py", line 54, in run
+Exception in thread Thread-12:
+Traceback (most recent call last):
+  File "/Users/leiyu/opt/anaconda3/envs/mlflow-8af91d08d13566aada991fdb38ca18c4510876b2/lib/python3.9/site-packages/wandb/apis/normalize.py", line 24, in wrapper
+    success = self.push()
+  File "/Users/leiyu/opt/anaconda3/envs/mlflow-8af91d08d13566aada991fdb38ca18c4510876b2/lib/python3.9/site-packages/wandb/filesync/upload_job.py", line 108, in push
+    return func(*args, **kwargs)
+  File "/Users/leiyu/opt/anaconda3/envs/mlflow-8af91d08d13566aada991fdb38ca18c4510876b2/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 960, in upload_urls
+    _, upload_headers, result = self._api.upload_urls(project, [self.save_name])
+  File "/Users/leiyu/opt/anaconda3/envs/mlflow-8af91d08d13566aada991fdb38ca18c4510876b2/lib/python3.9/site-packages/wandb/apis/normalize.py", line 62, in wrapper
+    raise CommError(
+wandb.errors.CommError: Run does not exist goldin2008/nyc_airbnb/1rbemn94.
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "/Users/leiyu/opt/anaconda3/envs/mlflow-8af91d08d13566aada991fdb38ca18c4510876b2/lib/python3.9/threading.py", line 973, in _bootstrap_inner
+    six.reraise(CommError, CommError(message, err), sys.exc_info()[2])
+  File "/Users/leiyu/opt/anaconda3/envs/mlflow-8af91d08d13566aada991fdb38ca18c4510876b2/lib/python3.9/site-packages/six.py", line 718, in reraise
+    self.run()
+  File "/Users/leiyu/opt/anaconda3/envs/mlflow-8af91d08d13566aada991fdb38ca18c4510876b2/lib/python3.9/site-packages/wandb/filesync/upload_job.py", line 54, in run
+    success = self.push()
+  File "/Users/leiyu/opt/anaconda3/envs/mlflow-8af91d08d13566aada991fdb38ca18c4510876b2/lib/python3.9/site-packages/wandb/filesync/upload_job.py", line 108, in push
+    _, upload_headers, result = self._api.upload_urls(project, [self.save_name])
+  File "/Users/leiyu/opt/anaconda3/envs/mlflow-8af91d08d13566aada991fdb38ca18c4510876b2/lib/python3.9/site-packages/wandb/apis/normalize.py", line 62, in wrapper
+    six.reraise(CommError, CommError(message, err), sys.exc_info()[2])
+  File "/Users/leiyu/opt/anaconda3/envs/mlflow-8af91d08d13566aada991fdb38ca18c4510876b2/lib/python3.9/site-packages/six.py", line 718, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/leiyu/opt/anaconda3/envs/mlflow-8af91d08d13566aada991fdb38ca18c4510876b2/lib/python3.9/site-packages/wandb/apis/normalize.py", line 24, in wrapper
+    raise value.with_traceback(tb)
+  File "/Users/leiyu/opt/anaconda3/envs/mlflow-8af91d08d13566aada991fdb38ca18c4510876b2/lib/python3.9/site-packages/wandb/apis/normalize.py", line 24, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/leiyu/opt/anaconda3/envs/mlflow-8af91d08d13566aada991fdb38ca18c4510876b2/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 960, in upload_urls
+    return func(*args, **kwargs)
+  File "/Users/leiyu/opt/anaconda3/envs/mlflow-8af91d08d13566aada991fdb38ca18c4510876b2/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 960, in upload_urls
+    raise CommError(
+wandb.errors.CommError: Run does not exist goldin2008/nyc_airbnb/1rbemn94.
+    raise CommError(
+wandb.errors.CommError: Run does not exist goldin2008/nyc_airbnb/1rbemn94.

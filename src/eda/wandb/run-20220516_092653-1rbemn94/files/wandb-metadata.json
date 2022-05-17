@@ -1,0 +1,24 @@
+{
+    "os": "macOS-12.3.1-x86_64-i386-64bit",
+    "python": "3.9.9",
+    "heartbeatAt": "2022-05-16T13:26:54.397501",
+    "startedAt": "2022-05-16T13:26:53.735111",
+    "docker": null,
+    "cpu_count": 10,
+    "cuda": null,
+    "args": [
+        "-f",
+        "/Users/leiyu/Library/Jupyter/runtime/kernel-9de937b4-5491-4f99-9a47-eec479844845.json"
+    ],
+    "state": "running",
+    "program": "EDA.ipynb",
+    "root": "/Users/leiyu/Projects/mlops_model_workflow",
+    "git": {
+        "remote": "https://github.com/goldin2008/mlops_model_workflow.git",
+        "commit": "542891549339843d4d05b8fb1056c2d62a07892a"
+    },
+    "email": "goldin20082011@gmail.com",
+    "host": "Leis-MBP",
+    "username": "leiyu",
+    "executable": "/Users/leiyu/opt/anaconda3/envs/mlflow-8af91d08d13566aada991fdb38ca18c4510876b2/bin/python"
+}
