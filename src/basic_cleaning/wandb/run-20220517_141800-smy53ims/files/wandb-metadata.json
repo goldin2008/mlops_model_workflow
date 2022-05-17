@@ -1,0 +1,35 @@
+{
+    "os": "macOS-12.3.1-x86_64-i386-64bit",
+    "python": "3.9.12",
+    "heartbeatAt": "2022-05-17T18:18:01.522027",
+    "startedAt": "2022-05-17T18:18:00.557417",
+    "docker": null,
+    "cpu_count": 10,
+    "cuda": null,
+    "args": [
+        "--input_artifact",
+        "sample.csv:latest",
+        "--output_artifact",
+        "clean_sample.csv",
+        "--output_type",
+        "clean_sample",
+        "--output_description",
+        "Data with outliers and null values removed",
+        "--min_price",
+        "10",
+        "--max_price",
+        "350"
+    ],
+    "state": "running",
+    "program": "/Users/leiyu/Projects/mlops_model_workflow/src/basic_cleaning/run.py",
+    "codePath": "src/basic_cleaning/run.py",
+    "git": {
+        "remote": "https://github.com/goldin2008/mlops_model_workflow.git",
+        "commit": "7cbc01cc125d2dd8e4e20108a7cd3cd84988e4ad"
+    },
+    "email": "goldin20082011@gmail.com",
+    "root": "/Users/leiyu/Projects/mlops_model_workflow",
+    "host": "Leis-MBP",
+    "username": "leiyu",
+    "executable": "/Users/leiyu/opt/anaconda3/envs/mlflow-2d74a3fe5b739a35fe7fa1f1025c70c15ecfe41c/bin/python"
+}

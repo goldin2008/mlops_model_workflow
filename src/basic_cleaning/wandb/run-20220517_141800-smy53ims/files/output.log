@@ -1,0 +1,5 @@
+2022-05-17 14:18:02,419 Downloading artifact
+2022-05-17 14:18:03,101 Dropping data not between min_price and max_price
+2022-05-17 14:18:03,107 Dropping data not in NYC
+2022-05-17 14:18:03,110 Converting last_review data type to datetime
+2022-05-17 14:18:03,114 Saving data to csv

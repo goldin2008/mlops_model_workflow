@@ -1,0 +1,157 @@
+2022-05-17 14:43:10,956 INFO    MainThread:13866 [internal.py:wandb_internal():88] W&B internal server running at pid: 13866, started at: 2022-05-17 14:43:10.956011
+2022-05-17 14:43:10,957 DEBUG   HandlerThread:13866 [handler.py:handle_request():124] handle_request: check_version
+2022-05-17 14:43:10,957 INFO    WriterThread:13866 [datastore.py:open_for_write():77] open: /Users/leiyu/Projects/mlops_model_workflow/src/basic_cleaning/wandb/run-20220517_144310-pl69fdc2/run-pl69fdc2.wandb
+2022-05-17 14:43:10,958 DEBUG   SenderThread:13866 [sender.py:send():179] send: header
+2022-05-17 14:43:10,958 DEBUG   SenderThread:13866 [sender.py:send_request():193] send_request: check_version
+2022-05-17 14:43:11,066 DEBUG   SenderThread:13866 [sender.py:send():179] send: run
+2022-05-17 14:43:11,238 INFO    SenderThread:13866 [dir_watcher.py:__init__():168] watching files in: /Users/leiyu/Projects/mlops_model_workflow/src/basic_cleaning/wandb/run-20220517_144310-pl69fdc2/files
+2022-05-17 14:43:11,238 INFO    SenderThread:13866 [sender.py:_start_run_threads():704] run started: pl69fdc2 with start time 1652812990
+2022-05-17 14:43:11,238 DEBUG   SenderThread:13866 [sender.py:send():179] send: summary
+2022-05-17 14:43:11,239 INFO    SenderThread:13866 [sender.py:_save_file():829] saving file wandb-summary.json with policy end
+2022-05-17 14:43:11,239 DEBUG   HandlerThread:13866 [handler.py:handle_request():124] handle_request: run_start
+2022-05-17 14:43:11,240 DEBUG   HandlerThread:13866 [meta.py:__init__():39] meta init
+2022-05-17 14:43:11,241 DEBUG   HandlerThread:13866 [meta.py:__init__():53] meta init done
+2022-05-17 14:43:11,241 DEBUG   HandlerThread:13866 [meta.py:probe():210] probe
+2022-05-17 14:43:11,247 DEBUG   HandlerThread:13866 [meta.py:_setup_git():200] setup git
+2022-05-17 14:43:11,286 DEBUG   HandlerThread:13866 [meta.py:_setup_git():207] setup git done
+2022-05-17 14:43:11,287 DEBUG   HandlerThread:13866 [meta.py:_save_pip():57] save pip
+2022-05-17 14:43:11,287 DEBUG   HandlerThread:13866 [meta.py:_save_pip():71] save pip done
+2022-05-17 14:43:11,287 DEBUG   HandlerThread:13866 [meta.py:_save_conda():78] save conda
+2022-05-17 14:43:11,986 DEBUG   HandlerThread:13866 [meta.py:_save_conda():86] save conda done
+2022-05-17 14:43:11,987 DEBUG   HandlerThread:13866 [meta.py:probe():252] probe done
+2022-05-17 14:43:11,990 DEBUG   SenderThread:13866 [sender.py:send():179] send: files
+2022-05-17 14:43:11,990 INFO    SenderThread:13866 [sender.py:_save_file():829] saving file wandb-metadata.json with policy now
+2022-05-17 14:43:11,993 DEBUG   HandlerThread:13866 [handler.py:handle_request():124] handle_request: stop_status
+2022-05-17 14:43:11,994 DEBUG   SenderThread:13866 [sender.py:send_request():193] send_request: stop_status
+2022-05-17 14:43:12,163 DEBUG   SenderThread:13866 [sender.py:send():179] send: config
+2022-05-17 14:43:12,245 INFO    Thread-8  :13866 [dir_watcher.py:_on_file_created():216] file/dir created: /Users/leiyu/Projects/mlops_model_workflow/src/basic_cleaning/wandb/run-20220517_144310-pl69fdc2/files/output.log
+2022-05-17 14:43:12,245 INFO    Thread-8  :13866 [dir_watcher.py:_on_file_created():216] file/dir created: /Users/leiyu/Projects/mlops_model_workflow/src/basic_cleaning/wandb/run-20220517_144310-pl69fdc2/files/wandb-summary.json
+2022-05-17 14:43:12,245 INFO    Thread-8  :13866 [dir_watcher.py:_on_file_created():216] file/dir created: /Users/leiyu/Projects/mlops_model_workflow/src/basic_cleaning/wandb/run-20220517_144310-pl69fdc2/files/requirements.txt
+2022-05-17 14:43:12,245 INFO    Thread-8  :13866 [dir_watcher.py:_on_file_created():216] file/dir created: /Users/leiyu/Projects/mlops_model_workflow/src/basic_cleaning/wandb/run-20220517_144310-pl69fdc2/files/wandb-metadata.json
+2022-05-17 14:43:12,245 INFO    Thread-8  :13866 [dir_watcher.py:_on_file_created():216] file/dir created: /Users/leiyu/Projects/mlops_model_workflow/src/basic_cleaning/wandb/run-20220517_144310-pl69fdc2/files/conda-environment.yaml
+2022-05-17 14:43:12,501 INFO    Thread-11 :13866 [upload_job.py:push():133] Uploaded file /var/folders/lj/sq_z3m_s3z51_g2s4qfv2hrw0000gn/T/tmpcxmh5znkwandb/2p8vsjat-wandb-metadata.json
+2022-05-17 14:43:12,966 DEBUG   HandlerThread:13866 [handler.py:handle_request():124] handle_request: log_artifact
+2022-05-17 14:43:12,966 DEBUG   SenderThread:13866 [sender.py:send_request():193] send_request: log_artifact
+2022-05-17 14:43:14,252 INFO    Thread-8  :13866 [dir_watcher.py:_on_file_modified():229] file/dir modified: /Users/leiyu/Projects/mlops_model_workflow/src/basic_cleaning/wandb/run-20220517_144310-pl69fdc2/files/output.log
+2022-05-17 14:43:14,253 INFO    Thread-8  :13866 [dir_watcher.py:_on_file_modified():229] file/dir modified: /Users/leiyu/Projects/mlops_model_workflow/src/basic_cleaning/wandb/run-20220517_144310-pl69fdc2/files/config.yaml
+2022-05-17 14:43:15,024 DEBUG   SenderThread:13866 [sender.py:send():179] send: telemetry
+2022-05-17 14:43:15,025 DEBUG   HandlerThread:13866 [handler.py:handle_request():124] handle_request: poll_exit
+2022-05-17 14:43:15,025 DEBUG   SenderThread:13866 [sender.py:send():179] send: exit
+2022-05-17 14:43:15,026 INFO    SenderThread:13866 [sender.py:send_exit():287] handling exit code: 0
+2022-05-17 14:43:15,026 INFO    SenderThread:13866 [sender.py:send_exit():295] send defer
+2022-05-17 14:43:15,027 DEBUG   SenderThread:13866 [sender.py:send_request():193] send_request: poll_exit
+2022-05-17 14:43:15,027 DEBUG   HandlerThread:13866 [handler.py:handle_request():124] handle_request: defer
+2022-05-17 14:43:15,028 INFO    HandlerThread:13866 [handler.py:handle_request_defer():141] handle defer: 0
+2022-05-17 14:43:15,028 DEBUG   SenderThread:13866 [sender.py:send_request():193] send_request: defer
+2022-05-17 14:43:15,029 INFO    SenderThread:13866 [sender.py:send_request_defer():304] handle sender defer: 0
+2022-05-17 14:43:15,029 INFO    SenderThread:13866 [sender.py:send_request_defer():342] send defer: 1
+2022-05-17 14:43:15,032 DEBUG   HandlerThread:13866 [handler.py:handle_request():124] handle_request: defer
+2022-05-17 14:43:15,033 INFO    HandlerThread:13866 [handler.py:handle_request_defer():141] handle defer: 1
+2022-05-17 14:43:15,122 DEBUG   SenderThread:13866 [sender.py:send_request():193] send_request: defer
+2022-05-17 14:43:15,124 INFO    SenderThread:13866 [sender.py:send_request_defer():304] handle sender defer: 1
+2022-05-17 14:43:15,124 INFO    SenderThread:13866 [sender.py:send_request_defer():342] send defer: 2
+2022-05-17 14:43:15,125 DEBUG   SenderThread:13866 [sender.py:send():179] send: stats
+2022-05-17 14:43:15,128 DEBUG   HandlerThread:13866 [handler.py:handle_request():124] handle_request: defer
+2022-05-17 14:43:15,128 INFO    HandlerThread:13866 [handler.py:handle_request_defer():141] handle defer: 2
+2022-05-17 14:43:15,128 DEBUG   SenderThread:13866 [sender.py:send_request():193] send_request: defer
+2022-05-17 14:43:15,128 INFO    SenderThread:13866 [sender.py:send_request_defer():304] handle sender defer: 2
+2022-05-17 14:43:15,128 INFO    SenderThread:13866 [sender.py:send_request_defer():342] send defer: 3
+2022-05-17 14:43:15,129 DEBUG   HandlerThread:13866 [handler.py:handle_request():124] handle_request: defer
+2022-05-17 14:43:15,129 INFO    HandlerThread:13866 [handler.py:handle_request_defer():141] handle defer: 3
+2022-05-17 14:43:15,129 DEBUG   SenderThread:13866 [sender.py:send():179] send: summary
+2022-05-17 14:43:15,130 INFO    SenderThread:13866 [sender.py:_save_file():829] saving file wandb-summary.json with policy end
+2022-05-17 14:43:15,131 DEBUG   SenderThread:13866 [sender.py:send_request():193] send_request: defer
+2022-05-17 14:43:15,131 INFO    SenderThread:13866 [sender.py:send_request_defer():304] handle sender defer: 3
+2022-05-17 14:43:15,131 INFO    SenderThread:13866 [sender.py:send_request_defer():342] send defer: 4
+2022-05-17 14:43:15,131 DEBUG   HandlerThread:13866 [handler.py:handle_request():124] handle_request: defer
+2022-05-17 14:43:15,131 INFO    HandlerThread:13866 [handler.py:handle_request_defer():141] handle defer: 4
+2022-05-17 14:43:15,132 DEBUG   SenderThread:13866 [sender.py:send_request():193] send_request: defer
+2022-05-17 14:43:15,132 INFO    SenderThread:13866 [sender.py:send_request_defer():304] handle sender defer: 4
+2022-05-17 14:43:15,147 DEBUG   HandlerThread:13866 [handler.py:handle_request():124] handle_request: poll_exit
+2022-05-17 14:43:15,256 INFO    Thread-8  :13866 [dir_watcher.py:_on_file_modified():229] file/dir modified: /Users/leiyu/Projects/mlops_model_workflow/src/basic_cleaning/wandb/run-20220517_144310-pl69fdc2/files/output.log
+2022-05-17 14:43:15,256 INFO    Thread-8  :13866 [dir_watcher.py:_on_file_modified():229] file/dir modified: /Users/leiyu/Projects/mlops_model_workflow/src/basic_cleaning/wandb/run-20220517_144310-pl69fdc2/files/wandb-summary.json
+2022-05-17 14:43:15,329 INFO    SenderThread:13866 [sender.py:send_request_defer():342] send defer: 5
+2022-05-17 14:43:15,329 DEBUG   SenderThread:13866 [sender.py:send_request():193] send_request: poll_exit
+2022-05-17 14:43:15,330 DEBUG   HandlerThread:13866 [handler.py:handle_request():124] handle_request: defer
+2022-05-17 14:43:15,330 INFO    HandlerThread:13866 [handler.py:handle_request_defer():141] handle defer: 5
+2022-05-17 14:43:15,330 DEBUG   SenderThread:13866 [sender.py:send_request():193] send_request: defer
+2022-05-17 14:43:15,330 INFO    SenderThread:13866 [sender.py:send_request_defer():304] handle sender defer: 5
+2022-05-17 14:43:15,330 INFO    SenderThread:13866 [dir_watcher.py:finish():282] shutting down directory watcher
+2022-05-17 14:43:15,437 DEBUG   HandlerThread:13866 [handler.py:handle_request():124] handle_request: poll_exit
+2022-05-17 14:43:16,263 INFO    SenderThread:13866 [dir_watcher.py:_on_file_modified():229] file/dir modified: /Users/leiyu/Projects/mlops_model_workflow/src/basic_cleaning/wandb/run-20220517_144310-pl69fdc2/files/config.yaml
+2022-05-17 14:43:16,265 INFO    SenderThread:13866 [dir_watcher.py:finish():312] scan: /Users/leiyu/Projects/mlops_model_workflow/src/basic_cleaning/wandb/run-20220517_144310-pl69fdc2/files
+2022-05-17 14:43:16,265 INFO    SenderThread:13866 [dir_watcher.py:finish():318] scan save: /Users/leiyu/Projects/mlops_model_workflow/src/basic_cleaning/wandb/run-20220517_144310-pl69fdc2/files/requirements.txt requirements.txt
+2022-05-17 14:43:16,266 INFO    SenderThread:13866 [dir_watcher.py:finish():318] scan save: /Users/leiyu/Projects/mlops_model_workflow/src/basic_cleaning/wandb/run-20220517_144310-pl69fdc2/files/output.log output.log
+2022-05-17 14:43:16,266 INFO    SenderThread:13866 [dir_watcher.py:finish():318] scan save: /Users/leiyu/Projects/mlops_model_workflow/src/basic_cleaning/wandb/run-20220517_144310-pl69fdc2/files/config.yaml config.yaml
+2022-05-17 14:43:16,268 INFO    SenderThread:13866 [dir_watcher.py:finish():318] scan save: /Users/leiyu/Projects/mlops_model_workflow/src/basic_cleaning/wandb/run-20220517_144310-pl69fdc2/files/wandb-summary.json wandb-summary.json
+2022-05-17 14:43:16,280 INFO    SenderThread:13866 [dir_watcher.py:finish():318] scan save: /Users/leiyu/Projects/mlops_model_workflow/src/basic_cleaning/wandb/run-20220517_144310-pl69fdc2/files/conda-environment.yaml conda-environment.yaml
+2022-05-17 14:43:16,280 INFO    SenderThread:13866 [dir_watcher.py:finish():318] scan save: /Users/leiyu/Projects/mlops_model_workflow/src/basic_cleaning/wandb/run-20220517_144310-pl69fdc2/files/wandb-metadata.json wandb-metadata.json
+2022-05-17 14:43:16,286 INFO    SenderThread:13866 [sender.py:send_request_defer():342] send defer: 6
+2022-05-17 14:43:16,287 DEBUG   SenderThread:13866 [sender.py:send_request():193] send_request: poll_exit
+2022-05-17 14:43:16,292 DEBUG   HandlerThread:13866 [handler.py:handle_request():124] handle_request: defer
+2022-05-17 14:43:16,297 INFO    HandlerThread:13866 [handler.py:handle_request_defer():141] handle defer: 6
+2022-05-17 14:43:16,298 DEBUG   SenderThread:13866 [sender.py:send_request():193] send_request: defer
+2022-05-17 14:43:16,298 INFO    SenderThread:13866 [sender.py:send_request_defer():304] handle sender defer: 6
+2022-05-17 14:43:16,299 INFO    SenderThread:13866 [file_pusher.py:finish():176] shutting down file pusher
+2022-05-17 14:43:16,299 INFO    SenderThread:13866 [sender.py:send_request_defer():342] send defer: 7
+2022-05-17 14:43:16,299 DEBUG   HandlerThread:13866 [handler.py:handle_request():124] handle_request: defer
+2022-05-17 14:43:16,299 INFO    HandlerThread:13866 [handler.py:handle_request_defer():141] handle defer: 7
+2022-05-17 14:43:16,300 DEBUG   SenderThread:13866 [sender.py:send_request():193] send_request: defer
+2022-05-17 14:43:16,300 INFO    SenderThread:13866 [sender.py:send_request_defer():304] handle sender defer: 7
+2022-05-17 14:43:16,403 DEBUG   HandlerThread:13866 [handler.py:handle_request():124] handle_request: poll_exit
+2022-05-17 14:43:16,456 INFO    SenderThread:13866 [sender.py:send_request_defer():342] send defer: 8
+2022-05-17 14:43:16,456 DEBUG   SenderThread:13866 [sender.py:send_request():193] send_request: poll_exit
+2022-05-17 14:43:16,457 DEBUG   HandlerThread:13866 [handler.py:handle_request():124] handle_request: defer
+2022-05-17 14:43:16,457 INFO    HandlerThread:13866 [handler.py:handle_request_defer():141] handle defer: 8
+2022-05-17 14:43:16,457 DEBUG   SenderThread:13866 [sender.py:send_request():193] send_request: defer
+2022-05-17 14:43:16,457 INFO    SenderThread:13866 [sender.py:send_request_defer():304] handle sender defer: 8
+2022-05-17 14:43:16,457 INFO    SenderThread:13866 [sender.py:send_request_defer():342] send defer: 9
+2022-05-17 14:43:16,457 DEBUG   HandlerThread:13866 [handler.py:handle_request():124] handle_request: defer
+2022-05-17 14:43:16,457 INFO    HandlerThread:13866 [handler.py:handle_request_defer():141] handle defer: 9
+2022-05-17 14:43:16,457 DEBUG   SenderThread:13866 [sender.py:send():179] send: final
+2022-05-17 14:43:16,457 DEBUG   SenderThread:13866 [sender.py:send():179] send: footer
+2022-05-17 14:43:16,457 DEBUG   SenderThread:13866 [sender.py:send_request():193] send_request: defer
+2022-05-17 14:43:16,458 INFO    SenderThread:13866 [sender.py:send_request_defer():304] handle sender defer: 9
+2022-05-17 14:43:16,562 DEBUG   HandlerThread:13866 [handler.py:handle_request():124] handle_request: poll_exit
+2022-05-17 14:43:16,562 DEBUG   SenderThread:13866 [sender.py:send_request():193] send_request: poll_exit
+2022-05-17 14:43:16,668 DEBUG   HandlerThread:13866 [handler.py:handle_request():124] handle_request: poll_exit
+2022-05-17 14:43:16,668 DEBUG   SenderThread:13866 [sender.py:send_request():193] send_request: poll_exit
+2022-05-17 14:43:16,774 DEBUG   HandlerThread:13866 [handler.py:handle_request():124] handle_request: poll_exit
+2022-05-17 14:43:16,774 DEBUG   SenderThread:13866 [sender.py:send_request():193] send_request: poll_exit
+2022-05-17 14:43:16,880 DEBUG   HandlerThread:13866 [handler.py:handle_request():124] handle_request: poll_exit
+2022-05-17 14:43:16,880 DEBUG   SenderThread:13866 [sender.py:send_request():193] send_request: poll_exit
+2022-05-17 14:43:16,986 DEBUG   HandlerThread:13866 [handler.py:handle_request():124] handle_request: poll_exit
+2022-05-17 14:43:16,986 DEBUG   SenderThread:13866 [sender.py:send_request():193] send_request: poll_exit
+2022-05-17 14:43:17,092 DEBUG   HandlerThread:13866 [handler.py:handle_request():124] handle_request: poll_exit
+2022-05-17 14:43:17,093 DEBUG   SenderThread:13866 [sender.py:send_request():193] send_request: poll_exit
+2022-05-17 14:43:17,198 DEBUG   HandlerThread:13866 [handler.py:handle_request():124] handle_request: poll_exit
+2022-05-17 14:43:17,198 DEBUG   SenderThread:13866 [sender.py:send_request():193] send_request: poll_exit
+2022-05-17 14:43:17,304 DEBUG   HandlerThread:13866 [handler.py:handle_request():124] handle_request: poll_exit
+2022-05-17 14:43:17,304 DEBUG   SenderThread:13866 [sender.py:send_request():193] send_request: poll_exit
+2022-05-17 14:43:17,410 DEBUG   HandlerThread:13866 [handler.py:handle_request():124] handle_request: poll_exit
+2022-05-17 14:43:17,410 DEBUG   SenderThread:13866 [sender.py:send_request():193] send_request: poll_exit
+2022-05-17 14:43:17,516 DEBUG   HandlerThread:13866 [handler.py:handle_request():124] handle_request: poll_exit
+2022-05-17 14:43:17,516 DEBUG   SenderThread:13866 [sender.py:send_request():193] send_request: poll_exit
+2022-05-17 14:43:17,625 DEBUG   HandlerThread:13866 [handler.py:handle_request():124] handle_request: poll_exit
+2022-05-17 14:43:17,626 INFO    Thread-12 :13866 [upload_job.py:push():133] Uploaded file /Users/leiyu/Projects/mlops_model_workflow/src/basic_cleaning/wandb/run-20220517_144310-pl69fdc2/files/requirements.txt
+2022-05-17 14:43:17,627 DEBUG   SenderThread:13866 [sender.py:send_request():193] send_request: poll_exit
+2022-05-17 14:43:17,645 INFO    Thread-13 :13866 [upload_job.py:push():133] Uploaded file /Users/leiyu/Projects/mlops_model_workflow/src/basic_cleaning/wandb/run-20220517_144310-pl69fdc2/files/output.log
+2022-05-17 14:43:17,645 INFO    Thread-14 :13866 [upload_job.py:push():133] Uploaded file /Users/leiyu/Projects/mlops_model_workflow/src/basic_cleaning/wandb/run-20220517_144310-pl69fdc2/files/config.yaml
+2022-05-17 14:43:17,668 INFO    Thread-16 :13866 [upload_job.py:push():133] Uploaded file /Users/leiyu/Projects/mlops_model_workflow/src/basic_cleaning/wandb/run-20220517_144310-pl69fdc2/files/conda-environment.yaml
+2022-05-17 14:43:17,676 INFO    Thread-15 :13866 [upload_job.py:push():133] Uploaded file /Users/leiyu/Projects/mlops_model_workflow/src/basic_cleaning/wandb/run-20220517_144310-pl69fdc2/files/wandb-summary.json
+2022-05-17 14:43:17,739 DEBUG   HandlerThread:13866 [handler.py:handle_request():124] handle_request: poll_exit
+2022-05-17 14:43:17,740 DEBUG   SenderThread:13866 [sender.py:send_request():193] send_request: poll_exit
+2022-05-17 14:43:17,850 DEBUG   HandlerThread:13866 [handler.py:handle_request():124] handle_request: poll_exit
+2022-05-17 14:43:17,851 DEBUG   SenderThread:13866 [sender.py:send_request():193] send_request: poll_exit
+2022-05-17 14:43:17,961 DEBUG   HandlerThread:13866 [handler.py:handle_request():124] handle_request: poll_exit
+2022-05-17 14:43:17,962 DEBUG   SenderThread:13866 [sender.py:send_request():193] send_request: poll_exit
+2022-05-17 14:43:17,965 INFO    SenderThread:13866 [file_pusher.py:join():181] waiting for file pusher
+2022-05-17 14:43:17,970 DEBUG   HandlerThread:13866 [handler.py:handle_request():124] handle_request: get_summary
+2022-05-17 14:43:17,971 DEBUG   HandlerThread:13866 [handler.py:handle_request():124] handle_request: sampled_history
+2022-05-17 14:43:17,972 DEBUG   HandlerThread:13866 [handler.py:handle_request():124] handle_request: shutdown
+2022-05-17 14:43:17,972 INFO    HandlerThread:13866 [handler.py:finish():638] shutting down handler
+2022-05-17 14:43:18,468 INFO    WriterThread:13866 [datastore.py:close():258] close: /Users/leiyu/Projects/mlops_model_workflow/src/basic_cleaning/wandb/run-20220517_144310-pl69fdc2/run-pl69fdc2.wandb
+2022-05-17 14:43:18,972 INFO    SenderThread:13866 [sender.py:finish():933] shutting down sender
+2022-05-17 14:43:18,972 INFO    SenderThread:13866 [file_pusher.py:finish():176] shutting down file pusher
+2022-05-17 14:43:18,973 INFO    SenderThread:13866 [file_pusher.py:join():181] waiting for file pusher
+2022-05-17 14:43:18,976 INFO    MainThread:13866 [internal.py:handle_exit():78] Internal process exited
