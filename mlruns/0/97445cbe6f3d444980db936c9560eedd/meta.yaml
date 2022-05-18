@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/leiyu/Projects/mlops_model_workflow/mlruns/0/97445cbe6f3d444980db936c9560eedd/artifacts
+end_time: 1640486244226
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: 97445cbe6f3d444980db936c9560eedd
+run_uuid: 97445cbe6f3d444980db936c9560eedd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1640486234686
+status: 3
+tags: []
+user_id: leiyu
